@@ -46,10 +46,41 @@ Estimate Boda Boda (motorbike taxi) fares based on distance traveled.
 
 ## 2. Chai Calculator
 
-A simple calculator to estimate the cost of making tea (chai) based on your ingredients and servings.
+A simple web and terminal application to estimate the ingredients needed to make your perfect cup(s) of Kenyan chai.
 
-> **_Instructions:_**  
-> Open the `chaiCalculator` folder and follow the README or instructions in the code to use the calculator.
+### Features
+
+- **Web App:** Enter the number of cups and get an instant breakdown of required ingredients in your browser.
+- **Terminal App:** Run the script in Node.js, enter the number of cups, and see the ingredient breakdown in your terminal.
+- **Responsive Design:** Mobile-friendly interface for easy use on any device.
+
+### How It Works
+
+For each cup of chai, the calculator uses:
+
+- **Water:** 200 ml
+- **Sugar:** 10 g
+- **Tea Leaves:** 10 g
+- **Milk:** 50 ml
+
+**Total Ingredients = Number of Cups × Amount per Cup**
+
+### Usage
+
+#### In the Browser
+
+1. Open `chaiCalculator/index.html` in your browser.
+2. Enter the number of cups you want to make.
+3. Click **Hesabu Mahitaji** to see the ingredient breakdown.
+
+#### In the Terminal
+
+1. Make sure you have [Node.js](https://nodejs.org/) installed.
+2. Run:
+   ```bash
+   node chaiCalculator/chai.js
+   ```
+3. Enter the number of cups when prompted.
 
 ---
 
@@ -57,7 +88,15 @@ A simple calculator to estimate the cost of making tea (chai) based on your ingr
 
 Estimate mobile money transaction costs (e.g., M-Pesa) for sending or withdrawing money.
 
-> **_Instructions:_**  
+### Features
+
+- **Web App:** Enter the amount and get an instant estimate of transaction costs in your browser.
+- **Terminal App:** Run the script in Node.js, enter the amount, and see the transaction cost breakdown in your terminal.
+- **Responsive Design:** Mobile-friendly interface.
+
+### Usage
+
+> **Instructions:**  
 > Open the `mobileMoneyEstimator` folder and follow the README or instructions in the code to use the estimator.
 
 ---
@@ -73,7 +112,7 @@ Estimate mobile money transaction costs (e.g., M-Pesa) for sending or withdrawin
 ├── chaiCalculator/
 │   ├── index.html
 │   ├── styles.css
-│   └── chaiCalculator.js
+│   └── chai.js
 ├── mobileMoneyEstimator/
 │   ├── index.html
 │   ├── styles.css
