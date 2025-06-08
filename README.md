@@ -86,18 +86,39 @@ For each cup of chai, the calculator uses:
 
 ## 3. Mobile Money Estimator
 
-Estimate mobile money transaction costs (e.g., M-Pesa) for sending or withdrawing money.
+A simple web and terminal application to estimate mobile money transaction costs (e.g., M-Pesa) for sending or withdrawing money.
 
 ### Features
 
 - **Web App:** Enter the amount and get an instant estimate of transaction costs in your browser.
 - **Terminal App:** Run the script in Node.js, enter the amount, and see the transaction cost breakdown in your terminal.
-- **Responsive Design:** Mobile-friendly interface.
+- **Responsive Design:** Mobile-friendly interface for easy use on any device.
+
+### How It Works
+
+- **Transaction Fee Rate:** 1.5% of the amount sent
+- **Minimum Fee:** KES 10
+- **Maximum Fee:** KES 70
+
+**Total Fee = max(10, min(70, Amount × 1.5%))**  
+**Total Debit = Amount + Fee**
 
 ### Usage
 
-> **Instructions:**  
-> Open the `mobileMoneyEstimator` folder and follow the README or instructions in the code to use the estimator.
+#### In the Browser
+
+1. Open `mobileMoneyEstimator/index.html` in your browser.
+2. Enter the amount you want to send.
+3. Click **Estimate Fee** (or the relevant button) to see the transaction breakdown.
+
+#### In the Terminal
+
+1. Make sure you have [Node.js](https://nodejs.org/) installed.
+2. Run:
+   ```bash
+   node mobileMoneyEstimator/fee.js
+   ```
+3. Enter the amount when prompted.
 
 ---
 
@@ -116,7 +137,7 @@ Estimate mobile money transaction costs (e.g., M-Pesa) for sending or withdrawin
 ├── mobileMoneyEstimator/
 │   ├── index.html
 │   ├── styles.css
-│   └── mobileMoneyEstimator.js
+│   └── fee.js
 └── README.md
 ```
 
