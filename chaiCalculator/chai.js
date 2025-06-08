@@ -1,9 +1,9 @@
 function calculateChaiIngredients(numberOfCups) {
-     const waterPerCup = 200; 
-     const milkPerCup = 50;   
-     const teaLeavesPerCup = 1;
-     const sugarPerCup = 2;
-     
+     const waterPerCup = 200;  // ml
+     const milkPerCup = 50;    // ml
+     const teaLeavesPerCup = 1; // tablespoons
+     const sugarPerCup = 2;     // teaspoons
+
      const water = numberOfCups * waterPerCup;
      const milk = numberOfCups * milkPerCup;
      const teaLeaves = numberOfCups * teaLeavesPerCup;
@@ -19,18 +19,18 @@ function calculateChaiIngredients(numberOfCups) {
 
 // Environment check
 if (typeof window !== "undefined" && typeof document !== "undefined") {
-     // Browser
-     const input = prompt("Karibu! How many cups of Chai Bora would you like to make?");
+     // Running in browser
+     const input = prompt("Karibu! Ungependa kutengeneza vikombe vingapi vya Chai Bora?");
      calculateChaiIngredients(Number(input));
 } else {
-     // Node.js CLI
+     // Running in Node.js CLI
      const readline = require("readline");
      const rl = readline.createInterface({
           input: process.stdin,
           output: process.stdout
      });
 
-     rl.question("Karibu! How many cups of Chai Bora would you like to make?", (input) => {
+     rl.question("Karibu! Ungependa kutengeneza vikombe vingapi vya Chai Bora? ", (input) => {
           calculateChaiIngredients(Number(input));
           rl.close();
      });
